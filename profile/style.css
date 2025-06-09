@@ -92,10 +92,6 @@ nav li:hover::after {
     width: 100%;
 }
 
-.menu{
-    display: none;
-}
-
 
 
 /* 主要內容區樣式 */
@@ -725,3 +721,5 @@ nav ul {
         background: rgba(255,255,255,0.1);
     }
 }
+
+
