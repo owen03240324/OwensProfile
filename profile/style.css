@@ -1,4 +1,3 @@
-/* 基礎重置與全局樣式 */
 * {
     margin: 0;
     padding: 0;
@@ -721,5 +720,4 @@ nav ul {
         background: rgba(255,255,255,0.1);
     }
 }
-
 
