@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     
     <title>Profile</title>
 </head>
+
+
 
 <body>
     <Header>
@@ -18,7 +21,7 @@
             <li>社團活動</li>
             <li>個人證書與獎項</li>
             <li>作品展示</li>
-            <li>聯繫我</li>
+            <li>聯絡方式</li>
         </ul>
     </nav>
     <button class="menu">&#9776;</button>
@@ -50,12 +53,11 @@
                     <p>目前就讀於聖若瑟教區中學第五校，主修理組科目但對文科也有濃厚興趣。我喜歡學習新事物，特別是在科技、程式設計和科學領域。
                         <br><br>
                         我的目標是成為一名優秀的計算機工程師，為社會做出貢獻。在學業之餘，我也積極參與各種課外活動和志工服務。</br></br></p>
-
+                    <p><strong>國家/地區:</strong> 中國澳門</p>
                     <p><strong>姓名:</strong> 李承峰</p>
                     <p><strong>年齡:</strong> 17歲</p>
                     <p><strong>學校:</strong> 聖若瑟教區中學第五校</p>
                     <p><strong>年級:</strong> F5B</p>
-                    <p><strong>電邮地址:</strong> owen03240324@gmail.com</p>
                     <p><strong>興趣:</strong> 程式設計、下棋、吉他</p>
                     
                      <h3>我的技能</h3>
@@ -158,30 +160,51 @@
         </section> 
 
        <section class="contact">
-    <h2>聯繫我</h2>
-    <form class="contact-form">
-        <div class="form-group">
-            <input type="text" id="name" placeholder=" " required>
-            <label for="name">姓名</label>
+    <h2>聯絡方式</h2>
+    <div class="contact-container">
+        <!-- 基礎聯繫方式 -->
+        <div class="contact-methods">
+            <div class="contact-card">
+                <i class="fa-brands fa-weixin"></i>
+                <div>
+                    <h3>微信號</h3>
+                    <p>kkwwoo6</p>
+                </div>
+            </div>
+            <div class="contact-card">
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                    <h3>電子郵件</h3>
+                    <p>owen03240324@gmail.com</p>
+                </div>
+            </div>
+            <div class="contact-card">
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                    <h3>電話</h3>
+                    <p>+853 6844 1914</p>
+                </div>
+            </div>
         </div>
         
-        <div class="form-group">
-            <input type="email" id="email" placeholder=" " required>
-            <label for="email">電子郵件</label>
+        <!-- 社交媒體 -->
+        <div class="social-media">
+            <h3>社交平台</h3>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/owen03240324/" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61551731362202" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://x.com/owen03240324" aria-label="Twitter">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+            </div>
         </div>
-        
-        <div class="form-group">
-            <textarea id="message" rows="5" placeholder=" " required></textarea>
-            <label for="message">您的訊息</label>
-        </div>
-        
-        <button type="submit" class="contact-btn">
-            <span>傳送訊息</span>
-            <svg viewBox="0 0 24 24" width="24" height="24">
-                <path fill="currentColor" d="M2,21L23,12L2,3V10L17,12L2,14V21Z" />
-            </svg>
-        </button>
-    </form>
+    </div>
+</section>
+   
 </section>
 
 
@@ -207,7 +230,7 @@
                         '社團活動': '.experiences',
                         '個人證書與獎項': '.name',
                         '作品展示': '.works',
-                        '聯繫我': '.contact'
+                        '聯絡方式': '.contact'
                     };
                     
                     const sectionText = this.textContent;
@@ -230,73 +253,3 @@
                 });
             });
         });
-
-                console.clear();
-        // 在現有 script 底部加入
-        const contactForm = document.querySelector('.contact-form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                var in1 = document.querySelector('#name').value;
-                var in2 = document.querySelector('#email').value;
-                var in3 = document.querySelector('#message').value;
-                // 獲取表單數據
-                // 這裡可以替換為實際的發送邏輯
-                alert(`感謝您的訊息！\n我們會盡快回覆您。\n\n表單數據範例:\n姓名: ${in1}\n郵件: ${in2}\n訊息: ${in3}`);
-                
-                // 重置表單
-                
-                // 按鈕反饋動畫
-                const btn = contactForm.querySelector('button');
-                btn.innerHTML = '<span>已送出！</span>';
-                setTimeout(() => {
-                    btn.innerHTML = '<span>傳送訊息</span><svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/></svg>';
-                }, 2000);
-            });
-        }
-
-                // 漢堡選單功能
-        const menuButton = document.querySelector('.menu');
-        const navList = document.querySelector('nav ul');
-        const overlay = document.querySelector('.overlay');
-
-        menuButton.addEventListener('click', function() {
-            this.classList.toggle('active');
-            navList.classList.toggle('active');
-            overlay.classList.toggle('active');
-            
-            // 切換漢堡圖標與X圖標
-            if (this.classList.contains('active')) {
-                this.innerHTML = '&times;';
-            } else {
-                this.innerHTML = '&#9776;';
-            }
-        });
-
-        // 點擊遮罩層關閉菜單
-        overlay.addEventListener('click', function() {
-            menuButton.classList.remove('active');
-            navList.classList.remove('active');
-            this.classList.remove('active');
-            menuButton.innerHTML = '&#9776;';
-        });
-
-        // 點擊導航項目關閉菜單 (手機端)
-        document.querySelectorAll('nav li').forEach(item => {
-            item.addEventListener('click', function() {
-                if (window.innerWidth <= 768) {
-                    menuButton.classList.remove('active');
-                    navList.classList.remove('active');
-                    overlay.classList.remove('active');
-                    menuButton.innerHTML = '&#9776;';
-                }
-            });
-        }); 
-
-
-    </script>
- 
-
-</body>
-
-</html>
