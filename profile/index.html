@@ -253,3 +253,51 @@
                 });
             });
         });
+
+                
+
+                // 漢堡選單功能
+        const menuButton = document.querySelector('.menu');
+        const navList = document.querySelector('nav ul');
+        const overlay = document.querySelector('.overlay');
+
+        menuButton.addEventListener('click', function() {
+            this.classList.toggle('active');
+            navList.classList.toggle('active');
+            overlay.classList.toggle('active');
+            
+            // 切換漢堡圖標與X圖標
+            if (this.classList.contains('active')) {
+                this.innerHTML = '&times;';
+            } else {
+                this.innerHTML = '&#9776;';
+            }
+        });
+
+        // 點擊遮罩層關閉菜單
+        overlay.addEventListener('click', function() {
+            menuButton.classList.remove('active');
+            navList.classList.remove('active');
+            this.classList.remove('active');
+            menuButton.innerHTML = '&#9776;';
+        });
+
+        // 點擊導航項目關閉菜單 (手機端)
+        document.querySelectorAll('nav li').forEach(item => {
+            item.addEventListener('click', function() {
+                if (window.innerWidth <= 768) {
+                    menuButton.classList.remove('active');
+                    navList.classList.remove('active');
+                    overlay.classList.remove('active');
+                    menuButton.innerHTML = '&#9776;';
+                }
+            });
+        }); 
+
+
+    </script>
+ 
+
+</body>
+
+</html>
