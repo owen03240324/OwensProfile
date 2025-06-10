@@ -324,91 +324,205 @@ h2::after {
     color: #666;
 }
 
-/* 聯繫我區域 */
 
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-}
 
-.form-group {
-    position: relative;
-    margin-bottom: 25px;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 15px;
-    font-size: 1rem;
-    background: transparent;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    transition: var(--transition);
-}
-
-.form-group textarea {
-    min-height: 150px;
-    resize: vertical;
-}
-
-.form-group label {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    color: #999;
-    pointer-events: none;
-    transition: var(--transition);
+/* 聯繫信息主容器 */
+.contact {
     background: white;
-    padding: 0 5px;
+    padding: 60px 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin: 40px auto;
+    max-width: 1000px;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
-    border-color: var(--secondary-color);
-    outline: none;
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
 }
 
-.form-group input:focus + label,
-.form-group textarea:focus + label,
-.form-group input:not(:placeholder-shown) + label,
-.form-group textarea:not(:placeholder-shown) + label {
-    top: -10px;
-    left: 10px;
-    font-size: 0.8rem;
+/* 聯繫卡片樣式 */
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: var(--light-gray);
+    border-radius: 12px;
+    transition: var(--transition);
+    border-left: 4px solid transparent;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-left-color: var(--secondary-color);
+}
+
+.contact-card i {
+    font-size: 2rem;
     color: var(--secondary-color);
+    min-width: 40px;
+    text-align: center;
 }
 
-/* 按鈕進化版樣式 */
-.contact-btn {
-    display: inline-flex;
+.contact-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.contact-card p {
+    color: var(--dark-gray);
+    word-break: break-all;
+}
+
+/* 社交媒體區 */
+/* 聯繫信息主容器 */
+.contact {
+    background: white;
+    padding: 60px 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin: 40px auto;
+    max-width: 1000px;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* 聯繫卡片樣式 */
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: var(--light-gray);
+    border-radius: 12px;
+    transition: var(--transition);
+    border-left: 4px solid transparent;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-left-color: var(--secondary-color);
+}
+
+.contact-card i {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    min-width: 40px;
+    text-align: center;
+}
+
+.contact-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.contact-card p {
+    color: var(--dark-gray);
+    word-break: break-all;
+}
+
+/* 社交媒體區 */
+.social-media {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.social-media h3 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.social-icons a {
+    display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    background: var(--secondary-color);
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 50px;
-    font-size: 1.1rem;
-    cursor: pointer;
+    text-decoration: none;
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    color: var(--primary-color);
     transition: var(--transition);
-    margin-top: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
-.contact-btn svg {
-    transition: transform 0.3s ease;
+.social-icons a:hover {
+    transform: scale(1.1) translateY(-5px);
+    color: white;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
-.contact-btn:hover {
-    background: var(--primary-color);
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+.social-icons a:nth-child(1):hover { background: #E1306C; } /* Instagram */
+.social-icons a:nth-child(2):hover { background: #1877F2; } /* Facebook */
+.social-icons a:nth-child(3):hover { background: #000000; } /* Twitter */
+
+/* 響應式調整 */
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-card {
+        padding: 15px;
+    }
+    
+    .social-icons a {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
 }
 
-.contact-btn:hover svg {
-    transform: translateX(5px);
+@media (max-width: 480px) {
+    .contact {
+        padding: 40px 20px;
+    }
+    
+    .contact-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .contact-card i {
+        margin-bottom: 10px;
+    }
 }
 
 
@@ -633,12 +747,6 @@ footer {
     }
 }
 
-
-
-
-
-
-
 /* 漢堡選單主樣式 */
 .menu {
     display: none; /* 默認隱藏 */
@@ -720,4 +828,3 @@ nav ul {
         background: rgba(255,255,255,0.1);
     }
 }
-
