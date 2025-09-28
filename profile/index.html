@@ -47,7 +47,7 @@
    
                 <div class="introtext">
                     <h3>
-                        你好!我是一名高二學生，熱愛學習與探索
+                        你好!我是一名高三學生，熱愛學習與探索
                     </h3>
 
                     <p>目前就讀於聖若瑟教區中學第五校，主修理組科目。我喜歡學習新事物，特別是在科技、程式設計和科學領域。
@@ -57,7 +57,7 @@
                     <p><strong>姓名:</strong> 李承峰</p>
                     <p><strong>年齡:</strong> 17歲</p>
                     <p><strong>學校:</strong> 聖若瑟教區中學第五校</p>
-                    <p><strong>年級:</strong> F5B</p>
+                    <p><strong>年級:</strong> F6B</p>
                     <p><strong>興趣:</strong> 程式設計、下棋、吉他</p>
                     
                      <h3>我的技能</h3>
@@ -75,7 +75,7 @@
             <h2>社團活動</h2>
             <div>
                 <h3>匠義特工</h3>
-                <h4>活躍成員</h4>
+                <h4>核心成員</h4>
                 <p>熱心參與多元義工活動，包括食物回收援助、街頭賣旗籌款等，致力服務社區並凝聚團隊精神。</p>
             </div>
 
@@ -83,6 +83,12 @@
                 <h3>學生會</h3>
                 <h4>康體部(策劃組)</h4>
                 <p>在學生會工作中，我負責規劃並執行各類校園活動，從前期準備到現場秩序維護，確保每個環節順利運作。</p>
+            </div>
+
+               <div>
+                <h3>程式語言設計班</h3>
+                <h4>活躍成員</h4>
+                <p>系統學習Python程式設計基礎，掌握資料結構、演算法邏輯及專案開發流程，完成多個實作專案，培養邏輯思維與問題解決能力。</p>
             </div>
 
             <div>
@@ -127,6 +133,12 @@
                 
             </div>
 
+              <div>
+                <h3>IELTS證書</h3>
+                <img src="image/Ielts.png" alt="IELTS證書">
+                
+            </div>
+
             
             
         </section> 
@@ -138,7 +150,7 @@
             <div><h3>roblox遊戲</h3>
                 <iframe width="1047" height="589" src="https://www.youtube.com/embed/VAG9GUHvkHU" title="我創造的第一個遊戲" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <p>這是一款由我獨立開發的 Roblox 遊戲，全程使用 Roblox Studio 引擎與 Lua 語言編寫。從模型建構、程式邏輯、音效設計、動畫製作到 UI 介面，皆由我一人完成。目前仍在持續優化與擴充內容，期待未來帶給玩家更完整的體驗！</p>
-                <p><a href="https://www.roblox.com/games/12258856775/Grandfather102s-House" class="game-link">點擊此處訪問遊戲</a></p>
+               
                 
             </div>
 
@@ -301,3 +313,57 @@
 </body>
 
 </html>
+
+
+<!--
+
+ <form class="contact-form">
+        <div class="form-group">
+            <input type="text" id="name" placeholder=" " required>
+            <label for="name">姓名</label>
+        </div>
+        
+        <div class="form-group">
+            <input type="email" id="email" placeholder=" " required>
+            <label for="email">電子郵件</label>
+        </div>
+        
+        <div class="form-group">
+            <textarea id="message" rows="5" placeholder=" " required></textarea>
+            <label for="message">您的訊息</label>
+        </div>
+        
+        <button type="submit" class="contact-btn">
+            <span>傳送訊息</span>
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <path fill="currentColor" d="M2,21L23,12L2,3V10L17,12L2,14V21Z" />
+            </svg>
+        </button>
+    </form>
+
+
+    console.clear();
+        // 在現有 script 底部加入
+        const contactForm = document.querySelector('.contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                var in1 = document.querySelector('#name').value;
+                var in2 = document.querySelector('#email').value;
+                var in3 = document.querySelector('#message').value;
+                // 獲取表單數據
+                // 這裡可以替換為實際的發送邏輯
+                alert(`感謝您的訊息！\n我們會盡快回覆您。\n\n表單數據範例:\n姓名: ${in1}\n郵件: ${in2}\n訊息: ${in3}`);
+                
+                // 重置表單
+                
+                // 按鈕反饋動畫
+                const btn = contactForm.querySelector('button');
+                btn.innerHTML = '<span>已送出！</span>';
+                setTimeout(() => {
+                    btn.innerHTML = '<span>傳送訊息</span><svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/></svg>';
+                }, 2000);
+            });
+        }
+
+    -->
